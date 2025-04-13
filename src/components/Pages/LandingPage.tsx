@@ -80,22 +80,21 @@ const LandingPage = () => {
             + New Payment
           </button>
         </div>
-
         <div className="bg-white rounded-lg shadow mb-6">
-          <div className="p-4 grid grid-cols-4 gap-4">
+          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="flex items-center gap-2 border border-gray-300 rounded-md p-2">
               <FaSearch className="h-4 w-4 text-gray-500" />
               <input
                 type="text"
                 placeholder="Search payments..."
-                className="flex-1 min-w-[200px] outline-none"
+                className="flex-1 w-full outline-none"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
 
             <select
-              className="min-w-[150px] p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-gray-300 rounded-md"
               value={selectedStatus}
               onChange={(e) => setSelectedStatus(e.target.value)}
             >
@@ -104,8 +103,9 @@ const LandingPage = () => {
               <option>Pending</option>
               <option>Failed</option>
             </select>
+
             <select
-              className="min-w-[150px] p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-gray-300 rounded-md"
               value={selectedMethod}
               onChange={(e) => setSelectedMethod(e.target.value)}
             >
@@ -113,9 +113,10 @@ const LandingPage = () => {
               <option>Credit Card</option>
               <option>Bank Transfer</option>
             </select>
+
             <input
               type="date"
-              className="min-w-[150px] p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-gray-300 rounded-md"
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
             />
